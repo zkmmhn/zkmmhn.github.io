@@ -1,0 +1,276 @@
+html, body {
+    height: 100%;              /* растягиваем на всю высоту окна */
+    margin: 0;
+    display: flex;
+    flex-direction: column;    /* вертикальная раскладка */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-container,
+.footer-container {
+    width: 100%;              /* во всю ширину */
+    margin: 0;                /* убираем ограничение по центру */
+    padding: 20px;            /* отступы */
+    display: flex;            /* оставляем flex */
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;   /* чтобы padding учитывался */
+}
+
+header {
+    width: 100%;
+    background: #d972ff;
+    color: white;
+}
+
+footer {
+    background: #d972ff;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.container {
+    background: linear-gradient(45deg, #1c3aa6, #ffffff);;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background {
+    background: linear-gradient(45deg, #ffffff, #1c3aa6);
+    width: 170px;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fba620;
+    border-radius: 50%;
+}
+
+.mushroom .stem {
+    width: 30px;
+    height: 80px;
+    background-color: #c6b393;
+    border: 3px solid #5c453b;
+    border-radius: 50%;
+}
+
+.mushroom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.mushroom .cap {
+    width: 90px;
+    height: 45px;
+    background: radial-gradient(circle at 65% 40%, #a18f84, #452d28); /* градиент сверху вниз */
+    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+    margin-bottom: -25px;
+    z-index: 2;
+}
+
+.grass {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 3;
+}
+
+.grass .stripe {
+    width: 100px;   /* ширина треугольника */
+    height: 40px;  /* высота треугольника */
+    background: repeating-linear-gradient(
+            135deg,
+            #04f61f,  /* светло-зелёный */
+            #04f61f 4px,
+            #0c7e2a 4px, /* тёмно-зелёный */
+            #0c7e2a 8px
+    );
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-left: -15px;
+}
+
+.grass .stripe:first-child {
+    margin-left: -10px;
+}
+
+.grass .stripe:last-child {
+    margin-right: -10px;
+}
+
+.cloud {
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    top: -5px; /* Корректировка расположения сверху */
+    left: 25px; /* Корректировка расположения слева */
+    background: radial-gradient(circle at 70% 65%, #ffffff, #2344bc);
+    border-radius: 100px / 50px;
+}
+
+.cloud.small {
+    position: absolute;
+    top: 5px; /* Смещение второго облака */
+    left: 70px; /* Смещение второго облака */
+    background: radial-gradient(circle at 0% 20%, #ffffff, #2344bc);
+}
+
+.dragonfly {
+    position: absolute;
+    top: 55px; /* Позиция над облаками и грибами */
+    left: 95px; /* Позиция по горизонтали */
+    width: 50px;
+    height: 30px;
+}
+
+.dragonfly .body {
+    position: absolute;
+    width: 45px;
+    height: 15px;
+    border-radius: 100px / 50px;
+    background: #e3c423;
+    border: 2px solid #9f8a19;
+    transform: rotate(-35deg);
+    z-index: 4;
+}
+
+.dragonfly .eye {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.dragonfly .head {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #e3c423;
+    border: 2px solid #9f8a19;
+    border-radius: 50%;
+    top: 15px;
+    left: -5px;
+    z-index: 4;
+}
+
+.dragonfly .wing {
+    position: absolute;
+    width: 35px;
+    height: 13px;
+    border-radius: 100px / 50px;
+    background: #3e4fd5;
+    border: 2px solid #2e3c9e;
+    z-index: 3;
+}
+
+footer {
+    width: 100%;
+    background: #d972ff;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    main {
+        padding: 0 10px;
+    }
+    footer p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .header-container {
+        padding: 8px;
+    }
+    main {
+        margin: 10px auto;
+    }
+    .footer-container {
+        padding: 10px;
+    }
+}
