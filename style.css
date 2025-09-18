@@ -1,8 +1,8 @@
 html, body {
-    height: 100%;              /* растягиваем на всю высоту окна */
+    height: 100%;        
     margin: 0;
     display: flex;
-    flex-direction: column;    /* вертикальная раскладка */
+    flex-direction: column;   
 }
 
 body {
@@ -19,13 +19,13 @@ body {
 
 .header-container,
 .footer-container {
-    width: 100%;              /* во всю ширину */
-    margin: 0;                /* убираем ограничение по центру */
-    padding: 20px;            /* отступы */
-    display: flex;            /* оставляем flex */
+    width: 100%;         
+    margin: 0;                
+    padding: 20px;          
+    display: flex;            
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;   /* чтобы padding учитывался */
+    box-sizing: border-box;   
 }
 
 header {
@@ -119,7 +119,7 @@ main {
 .mushroom .cap {
     width: 90px;
     height: 45px;
-    background: radial-gradient(circle at 65% 40%, #a18f84, #452d28); /* градиент сверху вниз */
+    background: radial-gradient(circle at 65% 40%, #a18f84, #452d28);
     border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
     margin-bottom: -25px;
     z-index: 2;
@@ -135,13 +135,13 @@ main {
 }
 
 .grass .stripe {
-    width: 100px;   /* ширина треугольника */
-    height: 40px;  /* высота треугольника */
+    width: 100px;  
+    height: 40px; 
     background: repeating-linear-gradient(
             135deg,
-            #04f61f,  /* светло-зелёный */
+            #04f61f, 
             #04f61f 4px,
-            #0c7e2a 4px, /* тёмно-зелёный */
+            #0c7e2a 4px, 
             #0c7e2a 8px
     );
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -160,23 +160,23 @@ main {
     position: absolute;
     width: 70px;
     height: 35px;
-    top: -5px; /* Корректировка расположения сверху */
-    left: 25px; /* Корректировка расположения слева */
+    top: -5px; 
+    left: 25px; 
     background: radial-gradient(circle at 70% 65%, #ffffff, #2344bc);
     border-radius: 100px / 50px;
 }
 
 .cloud.small {
     position: absolute;
-    top: 5px; /* Смещение второго облака */
-    left: 70px; /* Смещение второго облака */
+    top: 5px; 
+    left: 70px; 
     background: radial-gradient(circle at 0% 20%, #ffffff, #2344bc);
 }
 
 .dragonfly {
     position: absolute;
-    top: 55px; /* Позиция над облаками и грибами */
-    left: 95px; /* Позиция по горизонтали */
+    top: 55px; 
+    left: 95px; 
     width: 50px;
     height: 30px;
 }
