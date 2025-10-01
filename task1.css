@@ -1,0 +1,149 @@
+.container {
+    background: linear-gradient(45deg, #1c3aa6, #ffffff);;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background {
+    background: linear-gradient(45deg, #ffffff, #1c3aa6);
+    width: 170px;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #fba620;
+    border-radius: 50%;
+}
+
+.mushroom .stem {
+    width: 30px;
+    height: 80px;
+    background-color: #c6b393;
+    border: 3px solid #5c453b;
+    border-radius: 50%;
+}
+
+.mushroom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.mushroom .cap {
+    width: 90px;
+    height: 45px;
+    background: radial-gradient(circle at 65% 40%, #a18f84, #452d28);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+    margin-bottom: -25px;
+    z-index: 2;
+}
+
+.grass {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 3;
+}
+
+.grass .stripe {
+    width: 100px;
+    height: 40px;
+    background: repeating-linear-gradient(
+            135deg,
+            #04f61f,
+            #04f61f 4px,
+            #0c7e2a 4px,
+            #0c7e2a 8px
+    );
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin-left: -15px;
+}
+
+.grass .stripe:first-child {
+    margin-left: -10px;
+}
+
+.grass .stripe:last-child {
+    margin-right: -10px;
+}
+
+.cloud {
+    position: absolute;
+    width: 70px;
+    height: 35px;
+    top: -5px;
+    left: 25px;
+    background: radial-gradient(circle at 70% 65%, #ffffff, #2344bc);
+    border-radius: 100px / 50px;
+}
+
+.cloud.small {
+    position: absolute;
+    top: 5px;
+    left: 70px;
+    background: radial-gradient(circle at 0% 20%, #ffffff, #2344bc);
+}
+
+.dragonfly {
+    position: absolute;
+    top: 55px;
+    left: 95px;
+    width: 50px;
+    height: 30px;
+}
+
+.dragonfly .body {
+    position: absolute;
+    width: 45px;
+    height: 15px;
+    border-radius: 100px / 50px;
+    background: #e3c423;
+    border: 2px solid #9f8a19;
+    transform: rotate(-35deg);
+    z-index: 4;
+}
+
+.dragonfly .eye {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.dragonfly .head {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #e3c423;
+    border: 2px solid #9f8a19;
+    border-radius: 50%;
+    top: 15px;
+    left: -5px;
+    z-index: 4;
+}
+
+.dragonfly .wing {
+    position: absolute;
+    width: 35px;
+    height: 13px;
+    border-radius: 100px / 50px;
+    background: #3e4fd5;
+    border: 2px solid #2e3c9e;
+    z-index: 3;
+}

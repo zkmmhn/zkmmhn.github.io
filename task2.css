@@ -1,0 +1,75 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wardrobe-item {
+    position: relative;
+    width: 12.5em;
+    height: 12.5em;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wardrobe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.toy {
+    object-fit: contain;
+    position: absolute;
+}
+
+.boat {
+    width: 3em;
+    height: 3em;
+    top: 6em;
+    left: 5em;
+}
+
+.car {
+    width: 3.7em;
+    height: 3.7em;
+    top: 0.9em;
+    left: 1.3em;
+}
+
+.boy {
+    width: 5em;
+    height: 5em;
+    bottom: 0;
+    left: -1.3em;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.wardrobe-item:hover .hover-text {
+    opacity: 1;
+}
+
+.hover-text span {
+    color: white;
+    font-size: 1.125em;
+    padding: 0.5em 1em;
+    text-align: center;
+}
