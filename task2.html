@@ -1,27 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Задание 2</title>
+    <link rel="stylesheet" href="style_tasks.css">
     <link rel="stylesheet" href="task2.css">
 </head>
 <body>
-<main>
-    <section class="content">
-        <div class="wardrobe">
-            <div class="wardrobe-item">
-                <img src="var3/toy1.png" alt="Шкаф" class="wardrobe-img"/>
-                <img src="var3/toy2.png" alt="Лодка" class="toy boat"/>
-                <img src="var3/toy3.png" alt="Машина" class="toy car"/>
-                <img src="var3/toy4.png" alt="Мальчик" class="toy boy"/>
-                <div class="hover-text">
-                    <span>Магазин игрушек</span>
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo">
+            <!-- Логотип появится позже -->
+            <h1>Cosmetology</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="doctors.html">Врачи</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О клинике</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="appointment.html" class="btn">Запись</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="site-main">
+    <div class="main-content">
+        <section id="content">
+            <div class="wardrobe">
+                <div class="wardrobe-item">
+                    <img src="var3/toy1.png" alt="Шкаф" class="wardrobe-img"/>
+                    <img src="var3/toy2.png" alt="Лодка" class="toy boat"/>
+                    <img src="var3/toy3.png" alt="Машина" class="toy car"/>
+                    <img src="var3/toy4.png" alt="Мальчик" class="toy boy"/>
+                    <div class="hover-text">
+                        <span>Магазин игрушек</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </main>
-
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Косметологическая клиника. Все права защищены.</p>
+        <p>Телефон: +7 (000) 123-45-67 | Email: info@clinic.ru</p>
+    </div>
+</footer>
 </body>
 </html>
