@@ -3,91 +3,101 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Рисунок</title>
-    <link rel="stylesheet" href="../public/stylepic.css">
+    <title>Задание 1</title>
+    <link rel="stylesheet" href="style_tasks.css">
+    <link rel="stylesheet" href="task1.css">
 </head>
 <body>
-<header>
+<header class="site-header">
     <div class="header-container">
-        <h1>Мой сайт</h1>
-        <nav>
+        <div class="logo">
+            <!-- Логотип появится позже -->
+            <h1>Cosmetology</h1>
+        </div>
+        <nav class="main-nav">
             <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#content">Контент</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="doctors.html">Врачи</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О клинике</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="appointment.html" class="btn">Запись</a></li>
             </ul>
         </nav>
     </div>
 </header>
-<main>
-    <section id="content">
-        <div class="container">
+<main class="site-main">
+    <div class="main-content">
+        <section id="content">
+            <div class="container">
 
-            <div class="circle" style="top: 4px; left: 20px;"></div>
-            <div class="circle" style="top: 4px; left: 58px;"></div>
-            <div class="circle" style="top: 4px; left: 96px;"></div>
-            <div class="circle" style="top: 4px; left: 134px;"></div>
-            <div class="circle" style="top: 4px; left: 172px;"></div>
+                <div class="circle" style="top: 4px; left: 20px;"></div>
+                <div class="circle" style="top: 4px; left: 58px;"></div>
+                <div class="circle" style="top: 4px; left: 96px;"></div>
+                <div class="circle" style="top: 4px; left: 134px;"></div>
+                <div class="circle" style="top: 4px; left: 172px;"></div>
 
-            <div class="circle" style="top: 20px; right: 4px;"></div>
-            <div class="circle" style="top: 58px; right: 4px;"></div>
-            <div class="circle" style="top: 96px; right: 4px;"></div>
-            <div class="circle" style="top: 134px; right: 4px;"></div>
-            <div class="circle" style="top: 172px; right: 4px;"></div>
+                <div class="circle" style="top: 20px; right: 4px;"></div>
+                <div class="circle" style="top: 58px; right: 4px;"></div>
+                <div class="circle" style="top: 96px; right: 4px;"></div>
+                <div class="circle" style="top: 134px; right: 4px;"></div>
+                <div class="circle" style="top: 172px; right: 4px;"></div>
 
-            <div class="circle" style="bottom: 4px; left: 20px;"></div>
-            <div class="circle" style="bottom: 4px; left: 58px;"></div>
-            <div class="circle" style="bottom: 4px; left: 96px;"></div>
-            <div class="circle" style="bottom: 4px; left: 134px;"></div>
-            <div class="circle" style="bottom: 4px; left: 172px;"></div>
+                <div class="circle" style="bottom: 4px; left: 20px;"></div>
+                <div class="circle" style="bottom: 4px; left: 58px;"></div>
+                <div class="circle" style="bottom: 4px; left: 96px;"></div>
+                <div class="circle" style="bottom: 4px; left: 134px;"></div>
+                <div class="circle" style="bottom: 4px; left: 172px;"></div>
 
-            <div class="circle" style="top: 20px; left: 4px;"></div>
-            <div class="circle" style="top: 58px; left: 4px;"></div>
-            <div class="circle" style="top: 96px; left: 4px;"></div>
-            <div class="circle" style="top: 134px; left: 4px;"></div>
-            <div class="circle" style="top: 172px; left: 4px;"></div>
+                <div class="circle" style="top: 20px; left: 4px;"></div>
+                <div class="circle" style="top: 58px; left: 4px;"></div>
+                <div class="circle" style="top: 96px; left: 4px;"></div>
+                <div class="circle" style="top: 134px; left: 4px;"></div>
+                <div class="circle" style="top: 172px; left: 4px;"></div>
 
-            <div class="background">
+                <div class="background">
 
-                <div class="cloud"></div>
-                <div class="cloud small"></div>
+                    <div class="cloud"></div>
+                    <div class="cloud small"></div>
 
-                <div class="mushroom" style="left: -10px; bottom: 5px;">
-                    <div class="cap"></div>
-                    <div class="stem"></div>
-                </div>
+                    <div class="mushroom" style="left: -10px; bottom: 5px;">
+                        <div class="cap"></div>
+                        <div class="stem"></div>
+                    </div>
 
-                <div class="mushroom" style="left: 35px; transform: scale(0.7) rotate(35deg); bottom: -10px;">
-                    <div class="cap"></div>
-                    <div class="stem"></div>
-                </div>
+                    <div class="mushroom" style="left: 35px; transform: scale(0.7) rotate(35deg); bottom: -10px;">
+                        <div class="cap"></div>
+                        <div class="stem"></div>
+                    </div>
 
-                <div class="grass">
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                    <div class="stripe"></div>
-                </div>
+                    <div class="grass">
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                        <div class="stripe"></div>
+                    </div>
 
-                <div class="dragonfly">
-                    <div class="body"></div>
-                    <div class="head"></div>
-                    <div class="eye" style="left: -2px; top: 20px;"></div>
-                    <div class="eye" style="left: 3px; top: 23px;"></div>
-                    <div class="wing" style="transform: rotate(80deg); top: -25px;"></div>
-                    <div class="wing" style="transform: rotate(30deg); top: -15px; left: -15px;"></div>
-                    <div class="wing" style="transform: rotate(30deg); top: 15px; left: 30px;"></div>
-                    <div class="wing" style="transform: rotate(80deg); top: 25px; left: 15px;"></div>
+                    <div class="dragonfly">
+                        <div class="body"></div>
+                        <div class="head"></div>
+                        <div class="eye" style="left: -2px; top: 20px;"></div>
+                        <div class="eye" style="left: 3px; top: 23px;"></div>
+                        <div class="wing" style="transform: rotate(80deg); top: -25px;"></div>
+                        <div class="wing" style="transform: rotate(30deg); top: -15px; left: -15px;"></div>
+                        <div class="wing" style="transform: rotate(30deg); top: 15px; left: 30px;"></div>
+                        <div class="wing" style="transform: rotate(80deg); top: 25px; left: 15px;"></div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 </main>
-<footer>
+<footer class="site-footer">
     <div class="footer-container">
-        <p>&copy; Елизавета Ковкова 2025</p>
+        <p>&copy; 2025 Косметологическая клиника. Все права защищены.</p>
+        <p>Телефон: +7 (000) 123-45-67 | Email: info@clinic.ru</p>
     </div>
 </footer>
 </body>

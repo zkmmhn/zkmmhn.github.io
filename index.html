@@ -3,31 +3,48 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="../public/style.css">
+    <title>Косметологическая клиника</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
+<header class="site-header">
     <div class="header-container">
-        <h1>Мой сайт</h1>
-        <nav>
+        <div class="logo">
+            <!-- Логотип появится позже -->
+            <h1>Cosmetology</h1>
+        </div>
+        <nav class="main-nav">
             <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#content">Контент</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="doctors.html">Врачи</a></li>
+                <li><a href="articles.html">Статьи</a></li>
+                <li><a href="about.html">О клинике</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="appointment.html" class="btn">Запись</a></li>
             </ul>
         </nav>
     </div>
 </header>
-<main>
-    <section id="content">
-
-    </section>
+<main class="site-main">
+    <div class="main-content">
+        <nav class="tasks-nav">
+            <ul>
+                <li><a href="task1.html">Задание 1</a></li>
+                <li><a href="#">Задание 2</a></li>
+                <li><a href="#">Задание 3</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h2>Добро пожаловать в нашу клинику!</h2>
+            <p>Здесь будет основной контент.</p>
+        </section>
+    </div>
 </main>
-<footer>
+<footer class="site-footer">
     <div class="footer-container">
-        <p>&copy; Елизавета Ковкова 2025</p>
+        <p>&copy; 2025 Косметологическая клиника. Все права защищены.</p>
+        <p>Телефон: +7 (000) 123-45-67 | Email: info@clinic.ru</p>
     </div>
 </footer>
 </body>

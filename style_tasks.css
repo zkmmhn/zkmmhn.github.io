@@ -84,50 +84,6 @@ body {
     flex: 1; /* Растягивается на доступное пространство */
 }
 
-.tasks-nav {
-    background-color: #fff0f5; /* Светло-розовый фон */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 20px;
-    margin: 20px 0 20px 20px; /* Отступы: слева 20px, сверху/снизу 20px */
-    width: 200px; /* Фиксированная ширина бокового меню */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легкая тень для глубины */
-}
-
-.tasks-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.tasks-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 400;
-    transition: color 0.3s;
-    display: block; /* Для кликабельности всей строки */
-    padding: 5px 10px;
-    border-radius: 5px; /* Легкое скругление пунктов */
-}
-
-.tasks-nav a:hover {
-    color: #c75c8a;
-    background-color: rgba(199, 92, 138, 0.1); /* Легкий фон при наведении */
-}
-
-.hero {
-    flex: 1; /* Hero растягивается на доступное пространство внутри main */
-    padding: 100px 20px; /* Сохраняем ваши отступы, но теперь hero заполнит высоту */
-    text-align: center;
-    background: #fff0f5;
-    display: flex; /* Опционально: для центрирования контента внутри hero */
-    flex-direction: column;
-    justify-content: center; /* Центрирует контент по вертикали внутри hero */
-    align-items: center; /* Центрирует по горизонтали */
-    margin: 20px;
-}
 .footer-container {
     width: 100%;
     max-width: none;
