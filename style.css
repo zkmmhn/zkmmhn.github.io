@@ -19,9 +19,8 @@ body {
     color: var(--dark_green);
 }
 
-/* ---------- Шапка ---------- */
 .site-header {
-    position: absolute; /* поверх hero-секции */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -29,8 +28,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 2rem 8%;
-    background: transparent; /* убираем фон */
-    z-index: 10; /* чтобы было поверх фонового изображения */
+    background: transparent;
+    z-index: 10;
 }
 .logo{
     width:200px;
@@ -38,7 +37,6 @@ body {
     position:relative;
 }
 
-/* Зелёный круг */
 .green-circle{
     position:absolute;
     width:140px;
@@ -49,8 +47,6 @@ body {
     transform:translate(-50%,-50%);
 }
 
-/* Чёрная обводка — дуга, только сверху и по бокам, не снизу */
-/* ЧЁРНАЯ ОБВОДКА — РИСУЕМ ТОЛЬКО ДУГУ СВЕРХУ И ПО БОКАМ */
 .border-arc{
     position:absolute;
     width:170px;height:170px;
@@ -75,7 +71,6 @@ body {
     clip-path: circle(17% at 50% 100%);
 }
 
-/* Две вертикальные чёрные прямые (ручки ложки и вилки) */
 .handle{
     position:absolute;
     width: 5px;
@@ -92,7 +87,6 @@ body {
 }
 .handle.fork{  left:calc(50% + 25px); }
 
-/* Овальная обводка для ложки */
 .spoon-bowl{
     position:absolute;
     width: 25px;
@@ -104,19 +98,17 @@ body {
     transform:translateY(-50%);
 }
 
-/* Две закруглённые прямые для вилки (зубцы) */
 .fork-prongs {
     position: absolute;
     width: 36px;
-    height: 18px; /* ← 50% от 36px */
-    top: calc(50% - 4px + 18px); /* Смещаем вниз, чтобы нижняя часть была видна */
+    height: 18px;
+    top: calc(50% - 4px + 18px);
     left: calc(50% + 28px);
     transform: translateX(-50%);
     z-index: 3;
     box-sizing: border-box;
 }
 
-/* Полный круг — но обрезан контейнером */
 .fork-prongs::before {
     content: '';
     position: absolute;
@@ -136,7 +128,7 @@ body {
     height: 24px;
     background: #000;
     border-radius: 2.5px;
-    top: -110%; /* размещаем под полукругом */
+    top: -110%;
     z-index: 5;
 }
 
@@ -166,7 +158,6 @@ body {
     gap: 1.2rem;
 }
 
-/* ---------- Основной блок ---------- */
 .hero-section {
     display: flex;
     align-items: center;
@@ -192,10 +183,9 @@ body {
     color: var(--dark_green);
 }
 
-/* ---------- Кнопки ---------- */
 .hero-buttons {
     display: flex;
-    flex-direction: column; /* одна под другой */
+    flex-direction: column;
     gap: 1rem;
     align-items: center;
 }
@@ -210,7 +200,6 @@ body {
     width: fit-content;
 }
 
-/* Зелёная кнопка */
 .btn-green {
     background-color: var(--green);
     color: var(--dark_green);
@@ -237,7 +226,7 @@ body {
 .btn-dark {
     background-color: var(--dark_green);
     color: white;
-    border: 2px solid transparent; /* добавляем прозрачную рамку */
+    border: 2px solid transparent;
     transition: all 0.3s ease;
 }
 

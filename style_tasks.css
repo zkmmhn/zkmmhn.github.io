@@ -12,16 +12,16 @@
 }
 
 html {
-    height: 100%; /олвавра
+    height: 100%;
 }
 
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
     color: #333;
-    display: flex; /* Используем flexbox для всей страницы */
-    flex-direction: column; /* Контент выстраивается в столбец */
-    min-height: 100%; /* Минимальная высота равна высоте HTML (100%) */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .site-header {
@@ -87,14 +87,14 @@ body {
 }
 
 .site-main {
-    flex: 1; /* Main занимает пространство между header и footer */
-    display: flex; /* Делаем main flex-контейнером для растяжения hero */
-    flex-direction: column; /* Вертикальная компоновка внутри main */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
     display: flex;
-    flex: 1; /* Растягивается на доступное пространство */
+    flex: 1;
 }
 
 .footer-container {
