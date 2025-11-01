@@ -152,6 +152,44 @@ body {
     color: var(--green);
 }
 
+/* Основной контейнер выпадающего меню */
+.menu-item.dropdown {
+    position: relative;
+}
+
+/* Выпадающий список скрыт по умолчанию */
+.menu-item.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* прямо под пунктом */
+    left: 0;   /* выравниваем по левому краю родителя */
+    background-color: transparent; /* убираем белый фон */
+    min-width: max-content; /* ширина под контент */
+    z-index: 10;
+    flex-direction: column;
+}
+
+/* Стили для ссылок внутри выпадающего меню */
+.menu-item.dropdown .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: var(--dark_green);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0;               /* убираем внутренние отступы */
+    margin: 0.5rem 0 0 0;     /* одинаковый отступ сверху для всех элементов */
+    transition: color 0.3s ease;
+}
+
+.menu-item.dropdown .dropdown-content a:hover {
+    color: var(--green);
+}
+
+/* Показываем список при наведении на родителя */
+.menu-item.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
 .header-right {
     display: flex;
     align-items: center;
