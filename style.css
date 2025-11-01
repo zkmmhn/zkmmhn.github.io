@@ -1,177 +1,248 @@
-html {
-    height: 100%; /олвавра
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap');
+
+:root {
+    --green: #D9EF78;
+    --dark_green: #213D34;
+    --gray: #F1F2ED;
+    --light-bg: #F5F5F5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    color: #333;
-    display: flex; /* Используем flexbox для всей страницы */
-    flex-direction: column; /* Контент выстраивается в столбец */
-    min-height: 100%; /* Минимальная высота равна высоте HTML (100%) */
+    background-color: var(--light-bg);
+    font-family: 'Work Sans', sans-serif;
+    color: var(--dark_green);
 }
 
+/* ---------- Шапка ---------- */
 .site-header {
-    background-color: #f8f0f5;
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
+    position: absolute; /* поверх hero-секции */
     top: 0;
-    z-index: 1000;
-}
-
-.header-container {
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 0 30px;
+    padding: 2rem 8%;
+    background: transparent; /* убираем фон */
+    z-index: 10; /* чтобы было поверх фонового изображения */
+}
+.logo{
+    width:200px;
+    height:200px;
+    position:relative;
+}
+
+/* Зелёный круг */
+.green-circle{
+    position:absolute;
+    width:140px;
+    height:140px;
+    background: var(--green);
+    border-radius:50%;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* Чёрная обводка — дуга, только сверху и по бокам, не снизу */
+/* ЧЁРНАЯ ОБВОДКА — РИСУЕМ ТОЛЬКО ДУГУ СВЕРХУ И ПО БОКАМ */
+.border-arc{
+    position:absolute;
+    width:170px;height:170px;
+    border:5px solid #000;
+    border-radius:50%;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+    clip-path: inset(0 0 3% 0);
+}
+
+.bottom-mask {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border: 6px solid var(--gray);
+    background: transparent;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    clip-path: circle(17% at 50% 100%);
+}
+
+/* Две вертикальные чёрные прямые (ручки ложки и вилки) */
+.handle{
+    position:absolute;
+    width: 5px;
+    height: 86px;
+    background:#000;
+    border-radius:5px;
+    top: 47%;
+    z-index: 4;
+}
+.handle.spoon {
+    height: 50px;
+    left:calc(50% - 30px);
+    top: 65%;
+}
+.handle.fork{  left:calc(50% + 25px); }
+
+/* Овальная обводка для ложки */
+.spoon-bowl{
+    position:absolute;
+    width: 25px;
+    height: 40px;
+    border: 5px solid #000;
+    border-radius:50%;
+    top:calc(50% + 13px);
+    left:calc(50% - 40px);
+    transform:translateY(-50%);
+}
+
+/* Две закруглённые прямые для вилки (зубцы) */
+.fork-prongs {
+    position: absolute;
+    width: 36px;
+    height: 18px; /* ← 50% от 36px */
+    top: calc(50% - 4px + 18px); /* Смещаем вниз, чтобы нижняя часть была видна */
+    left: calc(50% + 28px);
+    transform: translateX(-50%);
+    z-index: 3;
     box-sizing: border-box;
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #c75c8a;
+/* Полный круг — но обрезан контейнером */
+.fork-prongs::before {
+    content: '';
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border: 5.5px solid #000;
+    border-radius: 50%;
+    top: -18px;
+    left: 0;
+    box-sizing: border-box;
+    clip-path: inset(50% 0 0 0);
 }
 
-.main-nav {
+.fork-prongs .tooth {
+    position: absolute;
+    width: 5px;
+    height: 24px;
+    background: #000;
+    border-radius: 2.5px;
+    top: -110%; /* размещаем под полукругом */
+    z-index: 5;
+}
+
+.fork-prongs .tooth.left { left: 0; }
+.fork-prongs .tooth.right { right: 0; }
+
+.site-menu {
     display: flex;
+    gap: 2rem;
+}
+
+.site-menu a, .login {
+    text-decoration: none;
+    color: var(--dark_green);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.site-menu a:hover, .login:hover {
+    color: var(--green);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* ---------- Основной блок ---------- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+    background-color: var(--gray);
+    min-height: 100vh;
+}
+
+.hero-content h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--dark_green);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    margin-bottom: 2rem;
+    color: var(--dark_green);
+}
+
+/* ---------- Кнопки ---------- */
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* одна под другой */
+    gap: 1rem;
     align-items: center;
 }
 
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #333;
+.btn {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    transition: color 0.3s;
-    white-space: nowrap;
-}
-
-.main-nav a:hover,
-.main-nav .active {
-    color: #c75c8a;
-}
-
-.main-nav .btn {
-    background-color: #c75c8a;
-    color: white !important;
-    padding: 8px 14px;
-    border-radius: 6px;
-}
-
-.main-nav .btn:hover {
-    background-color: #a94470;
-}
-
-.site-main {
-    flex: 1; /* Main занимает пространство между header и footer */
-    display: flex; /* Делаем main flex-контейнером для растяжения hero */
-    flex-direction: column; /* Вертикальная компоновка внутри main */
-}
-
-.main-content {
-    display: flex;
-    flex: 1; /* Растягивается на доступное пространство */
-}
-
-.tasks-nav {
-    background-color: #fff0f5; /* Светло-розовый фон */
-    border-radius: 10px; /* Закругленные углы */
-    padding: 20px;
-    margin: 20px 0 20px 20px; /* Отступы: слева 20px, сверху/снизу 20px */
-    width: 200px; /* Фиксированная ширина бокового меню */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Легкая тень для глубины */
-}
-
-.tasks-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.tasks-nav a {
+    border-radius: 50px;
     text-decoration: none;
-    color: #333;
-    font-weight: 400;
-    transition: color 0.3s;
-    display: block; /* Для кликабельности всей строки */
-    padding: 5px 10px;
-    border-radius: 5px; /* Легкое скругление пунктов */
+    width: fit-content;
 }
 
-.tasks-nav a:hover {
-    color: #c75c8a;
-    background-color: rgba(199, 92, 138, 0.1); /* Легкий фон при наведении */
+/* Зелёная кнопка */
+.btn-green {
+    background-color: var(--green);
+    color: var(--dark_green);
 }
 
-.hero {
-    flex: 1; /* Hero растягивается на доступное пространство внутри main */
-    padding: 100px 20px; /* Сохраняем ваши отступы, но теперь hero заполнит высоту */
-    text-align: center;
-    background: #fff0f5;
-    display: flex; /* Опционально: для центрирования контента внутри hero */
-    flex-direction: column;
-    justify-content: center; /* Центрирует контент по вертикали внутри hero */
-    align-items: center; /* Центрирует по горизонтали */
-    margin: 20px;
-}
-.footer-container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 0;
-}
-.site-footer {
-    background-color: #333;
+.btn-green:hover {
+    background-color: var(--dark_green);
     color: white;
-    padding: 20px 0;
-    text-align: center;
 }
 
-.site-footer p {
-    margin: 5px 0;
-    font-size: 14px;
+.btn-line {
+    border: 2px solid var(--dark_green);
+    color: var(--dark_green);
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 20px;
-    }
+.btn-line:hover {
+    background-color: var(--dark_green);
+    color: white;
+    border-color: var(--dark_green);
+}
 
-    .main-nav {
-        width: 100%;
-        margin-right: 0;
-    }
+.btn-dark {
+    background-color: var(--dark_green);
+    color: white;
+    border: 2px solid transparent; /* добавляем прозрачную рамку */
+    transition: all 0.3s ease;
+}
 
-    .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .main-nav li {
-        width: 100%;
-        text-align: left;
-    }
-
-    .main-nav a {
-        display: block;
-        padding: 5px 0;
-    }
+.btn-dark:hover {
+    background-color: transparent;
+    border: 2px solid var(--dark_green);
+    color: var(--dark_green);
 }
