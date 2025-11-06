@@ -41,7 +41,7 @@ a {
 }
 
 .background {
-    background: var(--light-bg);
+    background: var(--gray);
 }
 
 body {
@@ -199,25 +199,30 @@ body {
     position: relative;
 }
 
+.menu-item.dropdown > a {
+    position: relative;
+    padding: 0.5rem 0; /* Добавляем вертикальный отступ только для текста */
+}
+
 .menu-item.dropdown .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 0.5rem); /* небольшой отступ от слова "Задания" */
     left: 0;
-    background-color: transparent;
-    min-width: max-content;
-    z-index: 10;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; /* одинаковые интервалы между пунктами */
+    z-index: 10;
+    background-color: transparent;
 }
 
 .menu-item.dropdown .dropdown-content a {
-    display: block;
     text-decoration: none;
+    white-space: nowrap;
     color: var(--dark_green);
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 0;
-    margin: 0.5rem 0 0 0;
+    padding: 0.25rem 0;
     transition: color 0.3s ease;
 }
 
@@ -225,11 +230,9 @@ body {
     color: var(--green);
 }
 
-.menu-item.dropdown:hover .dropdown-content {
+.menu-item.dropdown:hover .dropdown-content,
+.menu-item.dropdown .dropdown-content:hover {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
 }
 
 .header-right {
