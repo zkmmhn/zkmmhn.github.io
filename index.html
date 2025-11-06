@@ -135,38 +135,31 @@
         ].filter(el => el);
 
         if (isMobile && cardsAndImages.length && title && subtitle && buttonsAbove) {
-            // 1. Переключаем на блочную модель
             content.style.display = 'block';
             content.style.padding = '4rem 5% 2rem';
 
-            // 2. Создаём карусель
             const carousel = document.createElement('div');
             carousel.className = 'mobile-carousel-container';
 
             cardsAndImages.forEach(item => {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'mobile-carousel-item';
-                wrapper.appendChild(item);               // перемещаем оригинал
+                wrapper.appendChild(item);
                 carousel.appendChild(wrapper);
             });
 
-            // 3. Вставляем в нужном порядке: title → subtitle → buttons → carousel
-            // (все элементы уже в DOM, просто перемещаем)
-            content.appendChild(title);          // гарантируем, что они первые
+            content.appendChild(title);
             content.appendChild(subtitle);
             content.appendChild(buttonsAbove);
             content.appendChild(carousel);
 
-            // 5. Скрываем иконки
             content.querySelectorAll('.icon-1, .icon-2, .icon-3, .icon-4')
                 .forEach(icon => icon.style.display = 'none');
 
-            // 6. Убираем лишние трансформы
             carousel.querySelectorAll('.card-1, .pic-2')
                 .forEach(el => el.style.transform = 'none');
         }
 
-        // Перезагрузка при смене размера (чтобы вернуть grid на десктопе)
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
@@ -208,7 +201,6 @@
 
         let currentStep = 0;
 
-        // Текст
         const numberEl   = column.querySelector('.number-1');
         const titleEl    = column.querySelector('.text-1');
         const textEl     = column.querySelector('.text-2');
@@ -227,7 +219,6 @@
                 img.classList.toggle('active', i === index);
             });
 
-            // Плавность
             column.style.opacity = '0';
             setTimeout(() => {
                 column.style.transition = 'opacity 0.4s ease';
@@ -235,7 +226,6 @@
             }, 50);
         }
 
-        // ПРАВИЛЬНО: .button-2 — вперёд, .button-3 — назад
         nextBtn.addEventListener('click', () => {
             currentStep = (currentStep + 1) % steps.length;
             showStep(currentStep);
