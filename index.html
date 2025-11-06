@@ -25,9 +25,9 @@
                 </div>
             </div>
             <nav class="site-menu">
-                <a href="#">Recipes</a>
-                <a href="#">Blog</a>
-                <a href="#">Customer Support</a>
+                <a href="#">Рецепты</a>
+                <a href="#">Блог</a>
+                <a href="#">Служба поддержки</a>
                 <div class="menu-item dropdown">
                     <a href="#">Задания</a>
                     <div class="dropdown-content">
@@ -37,60 +37,217 @@
                 </div>
             </nav>
             <div class="header-right">
-                <a href="#" class="login">Log In</a>
-                <a href="#" class="btn btn-dark">Start For Free</a>
+                <a href="#" class="login">Вход</a>
+                <a href="#" class="btn btn-dark">Начните бесплатно</a>
             </div>
         </header>
 
-        <!-- Hero Section (как в примере второго кода) -->
         <section class="content">
-            <h1 class="title">Elevate Your Mealtime with AI-Powered Personalization</h1>
-            <p class="subtitle">Effortless Planning, Healthier Eating</p>
+            <h1 class="title">Улучшите приемы пищи с помощью персонализации на основе искусственного интеллекта</h1>
+            <p class="subtitle">Простое планирование, здоровое питание</p>
 
             <article class="card-1">
                 <img src="img/green_bag_food.png" alt="Healthy eating habits">
-                <p class="text-wrapper-7">95%</p>
-                <p class="text-wrapper-8">Improved Eating Habits</p>
+                <p class="text-1">На 95%</p>
+                <p class="text-2">Улучшились привычки в еде</p>
             </article>
 
-            <img class="picture" src="img/dish.png" alt="Healthy meal preparation">
+            <img class="pic-1" src="img/dish.png" alt="Healthy meal preparation">
+
+            <div class="buttons-above">
+                <a href="#" class="btn btn-line">Попробуйте демо-версию</a>
+                <a href="#" class="div-wrapper btn btn-green">Начните бесплатно</a>
+            </div>
 
             <article class="card-2">
-                <p class="text-wrapper-10">30 000 +</p>
-                <p class="text-wrapper-9">Happy Users</p>
+                <p class="text-1">30 000+</p>
+                <p class="text-2">Счастливых пользователей</p>
             </article>
 
             <article class="card-3">
                 <img src="img/white_bag_food.png" alt="Fresh groceries">
-                <p class="text-wrapper-5">25%</p>
-                <p class="text-wrapper-6">Saved on Groceries</p>
+                <p class="text-1">25%</p>
+                <p class="text-2">Экономия на продуктах</p>
             </article>
 
-            <img class="img" src="img/plant.png" alt="Meal planning">
+            <img class="pic-2" src="img/plant.png" alt="Meal planning">
 
-            <!-- Иконки и элементы дизайна -->
             <div class="icon-1" aria-hidden="true">
-                <img class="carrot" src="img/carrot.png" alt="">
+                <img src="img/carrot.png" alt="">
             </div>
             <div class="icon-2" aria-hidden="true">
-                <img class="ingredients" src="img/products.png" alt="">
+                <img src="img/products.png" alt="">
             </div>
             <div class="icon-3" aria-hidden="true">
-                <img class="cherry" src="img/cherry.png" alt="">
+                <img src="img/cherry.png" alt="">
             </div>
             <div class="icon-4" aria-hidden="true">
-                <div class="ellipse"></div>
-                <img class="bread" src="img/bread.png" alt="">
+                <img src="img/bread.png" alt="">
             </div>
 
-            <!-- Кнопки -->
-            <a href="#" class="label-wrapper btn btn-line"><span class="label-2">Try Our Demo</span></a>
-            <a href="#" class="div-wrapper btn btn-green"><span class="label-3">Start For Free</span></a>
         </section>
     </div>
+
+    <!--------------------------------------------------------------------------------------------------------------->
+    <section class="how-it-works">
+        <header class="heading-2">
+            <h2 class="title">Как это работает</h2>
+            <div class="line"></div>
+            <p class="subtitle">Сделайте шаг в мир беспроблемного планирования питания с помощью нашего простого трехэтапного процесса</p>
+        </header>
+        <div class="frame">
+            <article class="column">
+                <h3 class="number-1">01</h3>
+                <p class="text-1">Персонализируйте Свой профиль</p>
+                <p class="text-2">Начните с создания своего профиля. Расскажите нам о своих диетических предпочтениях, целях в области питания и бюджете. Наша технология искусственного интеллекта адаптирует каждый план питания к вашим уникальным потребностям.</p>
+
+                <button class="button-1" aria-label="Previous step">←</button>
+                <button class="button-2" aria-label="Next step">→</button>
+
+                <p class="number-2">01/03</p>
+            </article>
+            <div class="pictures">
+                <img class="picture-4" src="img/bg-3.png" alt="" />
+                <img class="picture-3" src="img/bg-2.png" alt=""/>
+                <img class="picture-2" src="img/bg-1.png" alt=""/>
+            </div>
+        </div>
+
+    </section>
 </main>
 
 <footer class="footer"></footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const isMobile = window.innerWidth <= 1100;
+        const content = document.querySelector('.content');
+        if (!content) return;
 
+        const title = content.querySelector('.title');
+        const subtitle = content.querySelector('.subtitle');
+        const buttonsAbove = content.querySelector('.buttons-above');
+        const cardsAndImages = [
+            content.querySelector('.card-1'),
+            content.querySelector('.pic-1'),
+            content.querySelector('.card-2'),
+            content.querySelector('.pic-2'),
+            content.querySelector('.card-3')
+        ].filter(el => el);
+
+        if (isMobile && cardsAndImages.length && title && subtitle && buttonsAbove) {
+            // 1. Переключаем на блочную модель
+            content.style.display = 'block';
+            content.style.padding = '4rem 5% 2rem';
+
+            // 2. Создаём карусель
+            const carousel = document.createElement('div');
+            carousel.className = 'mobile-carousel-container';
+
+            cardsAndImages.forEach(item => {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'mobile-carousel-item';
+                wrapper.appendChild(item);               // перемещаем оригинал
+                carousel.appendChild(wrapper);
+            });
+
+            // 3. Вставляем в нужном порядке: title → subtitle → buttons → carousel
+            // (все элементы уже в DOM, просто перемещаем)
+            content.appendChild(title);          // гарантируем, что они первые
+            content.appendChild(subtitle);
+            content.appendChild(buttonsAbove);
+            content.appendChild(carousel);
+
+            // 5. Скрываем иконки
+            content.querySelectorAll('.icon-1, .icon-2, .icon-3, .icon-4')
+                .forEach(icon => icon.style.display = 'none');
+
+            // 6. Убираем лишние трансформы
+            carousel.querySelectorAll('.card-1, .pic-2')
+                .forEach(el => el.style.transform = 'none');
+        }
+
+        // Перезагрузка при смене размера (чтобы вернуть grid на десктопе)
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => location.reload(), 300);
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const steps = [
+            {
+                number: '01',
+                title: 'Персонализируйте Свой профиль',
+                text: 'Начните с создания своего профиля. Расскажите нам о своих диетических предпочтениях, целях в области питания и бюджете. Наша технология искусственного интеллекта адаптирует каждый план питания к вашим уникальным потребностям.',
+                counter: '01/03',
+                image: 'img/bg-3.png'
+            },
+            {
+                number: '02',
+                title: 'Выбирайте Свои блюда',
+                text: 'Просмотрите тысячи рецептов. Ставьте "нравится", "не нравится" или сохраняйте на потом. Чем больше вы общаетесь, тем более продуманным становится ваш план. Вы полностью контролируете ситуацию.',
+                counter: '02/03',
+                image: 'img/bg-2.png'
+            },
+            {
+                number: '03',
+                title: 'Разработай Свой план',
+                text: 'Получите еженедельный план питания со списком покупок и пошаговыми рецептами. Готовьте с уверенностью и наслаждайтесь каждым кусочком.',
+                counter: '03/03',
+                image: 'img/bg-1.png'
+            }
+        ];
+
+        const column   = document.querySelector('.how-it-works .column');
+        const pictures = document.querySelector('.how-it-works .pictures');
+        const nextBtn  = document.querySelector('.button-2');
+        const prevBtn  = document.querySelector('.button-1');
+
+        let currentStep = 0;
+
+        // Текст
+        const numberEl   = column.querySelector('.number-1');
+        const titleEl    = column.querySelector('.text-1');
+        const textEl     = column.querySelector('.text-2');
+        const counterEl  = column.querySelector('.number-2');
+        const images     = pictures.querySelectorAll('img');
+
+        function showStep(index) {
+            const step = steps[index];
+
+            numberEl.textContent   = step.number;
+            titleEl.textContent    = step.title;
+            textEl.textContent     = step.text;
+            counterEl.textContent  = step.counter;
+
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+
+            // Плавность
+            column.style.opacity = '0';
+            setTimeout(() => {
+                column.style.transition = 'opacity 0.4s ease';
+                column.style.opacity = '1';
+            }, 50);
+        }
+
+        // ПРАВИЛЬНО: .button-2 — вперёд, .button-3 — назад
+        nextBtn.addEventListener('click', () => {
+            currentStep = (currentStep + 1) % steps.length;
+            showStep(currentStep);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentStep = (currentStep - 1 + steps.length) % steps.length;
+            showStep(currentStep);
+        });
+
+        showStep(0);
+    });
+</script>
 </body>
 </html>
