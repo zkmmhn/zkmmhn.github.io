@@ -68,7 +68,6 @@ body {
 /*-------------------------------------------------------------------------------------------*/
 
 .logo-container {
-    transform: scale(0.5);
     transform-origin: center;
     width: 100px;
     height: 100px;
@@ -81,6 +80,7 @@ body {
     width:200px;
     height:200px;
     position:relative;
+    transform: scale(0.5);
 }
 
 .green-circle{
@@ -334,7 +334,7 @@ body {
     max-width: 60rem;
 }
 
-.card-1 {
+.content .card-1 {
     grid-column: 1;
     background: white;
     border-radius: 1.5rem;
@@ -346,7 +346,7 @@ body {
     gap: 0.75rem;
 }
 
-.card-1 .text-1 {
+.content .card-1 .text-1 {
     font-family: var(--font-syne);
     font-weight: 500;
     font-size: 3rem;
@@ -354,14 +354,14 @@ body {
     margin: 0;
 }
 
-.card-1 .text-2 {
+.content .card-1 .text-2 {
     font-family: var(--font-work);
     font-size: var(--subheading-size);
     color: var(--dark_green);
     margin: 0;
 }
 
-.card-1 img {
+.content .card-1 img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -369,7 +369,7 @@ body {
 
 }
 
-.pic-1 {
+.content .pic-1 {
     grid-column: 2;
     width: 100%;
     height: auto;
@@ -377,7 +377,7 @@ body {
     margin: 0 auto;
 }
 
-.card-2 {
+.content .card-2 {
     grid-column: 3;
     background: var(--dark_green);
     border-radius: 2rem;
@@ -389,20 +389,20 @@ body {
     max-height: 11rem;
 }
 
-.card-2 .text-1 {
+.content .card-2 .text-1 {
     font-family: var(--font-syne);
     font-size: 3.8rem;
     color: var(--green);
 }
 
-.card-2 .text-2 {
+.content .card-2 .text-2 {
     font-family: var(--font-work);
     font-size: var(--subheading-size);
     color: var(--green);
     margin-top: 0.5rem;
 }
 
-.pic-2 {
+.content .pic-2 {
     grid-column: 5;
     width: 100%;
     height: auto;
@@ -410,7 +410,7 @@ body {
     margin: 0 auto;
 }
 
-.card-3 {
+.content .card-3 {
     grid-column: 4;
     background: white;
     border-radius: 1.5rem;
@@ -422,7 +422,7 @@ body {
     gap: 0.75rem;
 }
 
-.card-3 .text-1 {
+.content .card-3 .text-1 {
     font-family: var(--font-syne);
     font-weight: 500;
     font-size: 3rem;
@@ -431,7 +431,7 @@ body {
     order: 2;
 }
 
-.card-3 .text-2 {
+.content .card-3 .text-2 {
     font-family: var(--font-work);
     font-size: var(--subheading-size);
     color: var(--dark_green);
@@ -439,15 +439,15 @@ body {
     order: 2;
 }
 
-.card-3 img {
+.content .card-3 img {
     width: 100%;
     height: auto;
     object-fit: cover;
     order: 1;
 }
 
-.card-1,
-.pic-2 {
+.content .card-1,
+.content .pic-2 {
     transform: translateY(-2rem);
 }
 
@@ -526,14 +526,14 @@ body {
         position: relative;
     }
 
-    .card-1 { grid-column: 1; }
-    .pic-1  { grid-column: 2; }
-    .card-2 { grid-column: 3; }
-    .pic-2  { grid-column: 5; }
-    .card-3 { grid-column: 4; }
+    .content .card-1 { grid-column: 1; }
+    .content .pic-1  { grid-column: 2; }
+    .content .card-2 { grid-column: 3; }
+    .content .pic-2  { grid-column: 5; }
+    .content .card-3 { grid-column: 4; }
 
-    .card-1,
-    .pic-2 {
+    .content .card-1,
+    .content .pic-2 {
         transform: translateY(-2rem);
     }
 
@@ -554,14 +554,14 @@ body {
         padding: 4rem 5% 2rem;
     }
 
-    .title {
+    .content .title {
         font-size: 2.8rem;
         text-align: center;
         margin: 0 auto 1rem;
         max-width: 50rem;
     }
 
-    .subtitle {
+    .content .subtitle {
         font-size: 1.4rem;
         text-align: center;
         margin-bottom: 2rem;
@@ -622,17 +622,17 @@ body {
         z-index: 10;
     }
 
-    .card-1,
-    .pic-1,
-    .card-2,
-    .pic-2,
-    .card-3 {
+    .content .card-1,
+    .content .pic-1,
+    .content .card-2,
+    .content .pic-2,
+    .content .card-3 {
         grid-column: auto;
         transform: none;
         margin: 0;
     }
 
-    .card-2 {
+    .content .card-2 {
         padding: 2rem 1.5rem;
         border-radius: 2rem;
     }
@@ -680,7 +680,7 @@ body {
 }
 
 @media (max-width: 400px) {
-    .title { font-size: 2.4rem; }
+    .content .title { font-size: 2.4rem; }
     .buttons-above { gap: 0.75rem; margin: 1.5rem auto 2.5rem; }
     .btn { padding: 1rem 1.8rem; font-size: 1.1rem; }
 }
@@ -939,3 +939,612 @@ body {
     }
 }
 /*-----------------------------------------------------------------------------------*/
+.benefits {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 6rem 5% 8rem;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.benefits .heading-3 {
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.benefits .title {
+    font: 600 3rem/1.2 var(--font-syne), sans-serif; color: var(--dark_green); margin: 0;
+}
+
+.benefits .line {
+    width: 6rem;
+    height: .25rem;
+    background: var(--dark_green);
+    border-radius: .125rem;
+    transform: rotate(120deg);
+}
+
+.benefits .subtitle {
+    font: 400 1.25rem/1.6 var(--font-work), sans-serif; color: var(--dark_green); max-width: 40rem; margin: 0;
+}
+
+.benefits .cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    box-sizing: border-box;
+}
+
+.benefits .frame {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100rem;
+}
+
+.benefits .row,
+.benefits .row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.benefits .row {
+    align-items: stretch;
+}
+
+.benefits .card-1,
+.benefits .card-2,
+.benefits .card-3,
+.benefits .card-4,
+.benefits .card-5,
+.benefits .card-6 {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    min-height: 500px;
+    padding: 6rem 2rem;
+    border-radius: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.benefits .card-1 {
+    background: var(--green);
+    color: var(--dark_green);
+}
+
+.benefits .pic-6 {
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    min-height: 500px;
+    border-radius: 35rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits .pic-6 img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    border-radius: 35rem;
+}
+
+.benefits .card-2 {
+    background: transparent;
+    color: var(--dark_green);
+}
+
+.benefits .card-3 {
+    background: var(--gray);
+    color: var(--dark_green);
+}
+
+.benefits .card-4,
+.benefits .card-5 {
+    background: transparent;
+}
+
+.benefits .card-6 {
+    background: var(--dark_green);
+    color: var(--green);
+}
+
+.benefits .pic-7 {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.benefits [class^="title-"] {
+    font-family: var(--font-syne);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 1rem;
+    line-height: 1.3;
+}
+
+.benefits [class^="text-"] {
+    font-family: var(--font-work);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 1rem;
+}
+
+@media (max-width: 1100px) {
+    .benefits {
+        padding: 4rem 5% 6rem;
+    }
+
+    .benefits .heading-3 {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .benefits .title {
+        font-size: 2.4rem;
+    }
+
+    .benefits .subtitle {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .benefits .line {
+        transform: rotate(0deg);
+        margin: 0.5rem 0;
+    }
+
+    .benefits .cards {
+        margin-top: 0;
+    }
+
+    .benefits .row,
+    .benefits .row-2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .benefits .card-1,
+    .benefits .card-2,
+    .benefits .card-3,
+    .benefits .pic-6 {
+        min-width: 280px;
+        max-width: 340px;
+        min-height: 420px;
+        padding: 4rem 2rem;
+    }
+
+    .benefits .pic-6 img {
+        width: 110%;
+        height: 110%;
+    }
+
+    .benefits .card-4,
+    .benefits .card-5 {
+        min-width: 240px;
+        max-width: 280px;
+        min-height: 300px;
+        padding: 2rem;
+    }
+
+    .benefits .pic-7 {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .benefits .title {
+        font-size: 2rem;
+    }
+
+    .benefits .subtitle {
+        font-size: 1rem;
+    }
+
+    .benefits .card-1,
+    .benefits .card-2,
+    .benefits .card-3,
+    .benefits .pic-6 {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 380px;
+        padding: 3rem 1.5rem;
+    }
+
+    .benefits .pic-6 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .benefits .card-4,
+    .benefits .card-5 {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 260px;
+    }
+
+    .benefits .pic-7 {
+        max-width: 240px;
+    }
+
+    .benefits [class^="title-"] {
+        font-size: 1.3rem;
+        margin: 0.75rem;
+    }
+
+    .benefits [class^="text-"] {
+        font-size: 0.95rem;
+        margin: 0 0.75rem;
+    }
+}
+/*--------------------------------------------------------------------------------------------*/
+.recipes {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 6rem 5% 8rem;
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+
+.recipes .heading-3 {
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.recipes .title {
+    font: 600 3rem/1.2 var(--font-syne), sans-serif; color: var(--dark_green); margin: 0;
+}
+
+.recipes .line {
+    width: 6rem;
+    height: .25rem;
+    background: var(--dark_green);
+    border-radius: .125rem;
+    transform: rotate(120deg);
+}
+
+.recipes .subtitle {
+    font: 400 1.25rem/1.6 var(--font-work), sans-serif; color: var(--dark_green); max-width: 40rem; margin: 0;
+}
+
+.recipes .cards {
+    display: flex;
+    gap: 3rem;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.recipes .cards-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1;
+    min-height: 100%;
+    justify-content: stretch;
+}
+
+.recipes .card-2 {
+    flex: 1;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipes .big_picture {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+    border-radius: 2rem;
+    display: block;
+}
+
+.recipes .link {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0.6rem;
+    border-radius: 0 2rem 2rem 0;
+    max-width: 50%;
+}
+
+.recipes .title-2 {
+    font: 400 1.4rem/1.3 var(--font-syne), sans-serif;
+    color: var(--dark_green);
+}
+
+.recipes .button-5 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 3.5rem;
+    background: transparent;
+    border: 0.125rem solid var(--dark_green);
+    color: var(--dark_green);
+    border-radius: 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.recipes .button-5:hover {
+    background: var(--dark_green);
+    border: 0.125rem solid var(--dark_green);
+    color: white;
+}
+
+.recipes .card-10,
+.recipes .card-11,
+.recipes .card-12 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    padding: 0;
+    background: transparent;
+    min-height: 0;
+}
+
+.recipes .plate-1,
+.recipes .plate-2,
+.recipes .plate-3 {
+    width: 35%;
+    height: auto;
+    max-height: 70%;
+    object-fit: contain;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.recipes .card-10 {
+    background: transparent;
+    border: 0.125rem solid var(--dark_green);
+    flex-direction: row;
+    align-items: center;
+}
+
+.recipes .article-1,
+.recipes .article-2,
+.recipes .article {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.recipes .title-10,
+.recipes .title-11,
+.recipes .title-12  {
+    font: 500 1.4rem/1.3 var(--font-syne), sans-serif;
+    color: var(--dark_green);
+    margin: 0 0 1rem;
+}
+
+.recipes .button-1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 2.5rem;
+    background: var(--green);
+    border: 0.125rem solid var(--dark_green);
+    color: var(--dark_green);
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.recipes .button-1:hover {
+    background: var(--dark_green);
+    border: 0.125rem solid var(--dark_green);
+    color: white;
+}
+
+.recipes .card-11 {
+    background: var(--green);
+    border-radius: 10rem;
+    padding-right: 2rem;
+}
+
+.recipes .card-12 {
+    background: var(--gray);
+    color: var(--dark_green);
+}
+
+@media (max-width: 1100px) {
+    .recipes {
+        padding: 4rem 5% 6rem;
+    }
+
+    .recipes .heading-3 {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .recipes .title {
+        font-size: 2.4rem;
+    }
+
+    .recipes .subtitle {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .recipes .line {
+        transform: rotate(0deg);
+        margin: 0.5rem 0;
+    }
+
+    .recipes .cards {
+        margin-top: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipes .cards-1,
+    .recipes .card-2 {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .recipes .cards-1 {
+        gap: 2rem;
+    }
+
+    .recipes .card-10,
+    .recipes .card-11,
+    .recipes .card-12 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .recipes .plate-1,
+    .recipes .plate-2,
+    .recipes .plate-3 {
+        width: 80%;
+        max-width: 280px;
+        max-height: 200px;
+        margin-bottom: 1rem;
+        order: -1;
+    }
+
+    .recipes .article-1,
+    .recipes .article-2,
+    .recipes .article {
+        padding: 0;
+        align-items: center;
+    }
+
+    .recipes .button-1 {
+        align-self: center;
+    }
+
+    .recipes .card-2 {
+        order: -1;
+        height: 400px;
+        padding: 1.5rem;
+    }
+
+    .recipes .big_picture {
+        width: 100%;
+        max-width: 400px;
+        max-height: 100vh;
+    }
+
+    .recipes .link {
+        position: static;
+        transform: none;
+        border-radius: 2rem;
+        justify-content: center;
+        max-width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .recipes .title-2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .recipes .button-5 {
+        width: 5rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipes .title {
+        font-size: 2rem;
+    }
+
+    .recipes .subtitle {
+        font-size: 1rem;
+    }
+
+    .recipes .card-10,
+    .recipes .card-11,
+    .recipes .card-12 {
+        padding: 1rem;
+    }
+
+    .recipes .plate-1,
+    .recipes .plate-2,
+    .recipes .plate-3 {
+        width: 100%;
+        max-height: 180px;
+    }
+
+    .recipes .title-10,
+    .recipes .title-11,
+    .recipes .title-12 {
+        font-size: 1.2rem;
+    }
+
+    .recipes .button-1 {
+        width: 9rem;
+        height: 2.2rem;
+        font-size: 0.9rem;
+    }
+
+    .recipes .card-2 {
+        height: 350px;
+    }
+
+    .recipes .big_picture {
+        max-height: 240px;
+    }
+
+    .recipes .title-2 {
+        font-size: 1.1rem;
+    }
+}
