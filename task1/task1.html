@@ -4,30 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 1</title>
-    <link rel="stylesheet" href="../style_tasks.css">
+    <link rel="stylesheet" href="../styles/style_tasks.css">
     <link rel="stylesheet" href="task1.css">
+    <link rel="stylesheet" href="../styles/globals.css">
+    <link rel="stylesheet" href="../styles/logo.css">
 </head>
 <body>
-<header class="site-header">
-    <div class="header-container">
-        <div class="logo">
-            <!-- Логотип появится позже -->
-            <h1>Cosmetology</h1>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="../index.html" class="active">Главная</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="doctors.html">Врачи</a></li>
-                <li><a href="articles.html">Статьи</a></li>
-                <li><a href="about.html">О клинике</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="appointment.html" class="btn">Запись</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <main class="site-main">
+    <header class="site-header">
+        <div class="logo-container">
+            <div class="logo">
+                <div class="green-circle"></div>
+                <div class="border-arc"></div>
+                <div class="bottom-mask"></div>
+                <div class="handle spoon"></div>
+                <div class="handle fork"></div>
+                <div class="spoon-bowl"></div>
+                <div class="fork-prongs">
+                    <div class="tooth left"></div>
+                    <div class="tooth right"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="site-menu">
+            <a href="../index.html">Главная</a>
+            <div class="menu-item dropdown">
+                <a href="#">Задания</a>
+                <div class="dropdown-content">
+                    <a href="../task1/task1.html">Задание 1</a>
+                    <a href="../task2/task2.html">Задание 2</a>
+                    <a href="../task3/task3.html">Задание 3</a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="main-content">
         <section id="content">
             <div class="container">
@@ -93,12 +103,44 @@
             </div>
         </section>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="content-1">
+                <div class="content-2">
+                    <nav class="nav">
+                        <div class="logo-container">
+                            <div class="logo">
+                                <div class="green-circle"></div>
+                                <div class="border-arc"></div>
+                                <div class="bottom-mask"></div>
+                                <div class="handle spoon"></div>
+                                <div class="handle fork"></div>
+                                <div class="spoon-bowl"></div>
+                                <div class="fork-prongs">
+                                    <div class="tooth left"></div>
+                                    <div class="tooth right"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="../index.html#recipes">Рецепты</a></li>
+                            <li><a href="#blog">Блог</a></li>
+                        </ul>
+                        <ul class="menu">
+                            <li><a href="#support">Служба поддержки</a></li>
+                            <li><a href="#profile">Ваш профиль</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="footer-right">
+                    <p class="text">Присоединяйтесь к нам в нашем путешествии, чтобы сделать процесс планирования питания простым и радостным.</p>
+                    <p class="name">© 2025 Ковкова Елизавета</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </main>
-<footer class="site-footer">
-    <div class="footer-container">
-        <p>&copy; 2025 Ковкова Елизавета. Косметологическая клиника.</p>
-        <p>Телефон: +7 (000) 123-45-67 | Email: info@clinic.ru</p>
-    </div>
-</footer>
 </body>
 </html>

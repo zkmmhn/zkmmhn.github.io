@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap');
+
+html,
+body {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --green: #D9EF78;
+    --dark_green: #213D34;
+    --gray: #F1F2ED;
+    --light-bg: #F5F5F5;
+
+    --font-syne: "Syne", sans-serif;
+    --font-work: "Work Sans", sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

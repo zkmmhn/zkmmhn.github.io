@@ -1,15 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Задание 2</title>
+    <title>Тест: Ругательства</title>
+    <link rel="stylesheet" href="task3.css">
     <link rel="stylesheet" href="../styles/style_tasks.css">
-    <link rel="stylesheet" href="task2.css">
     <link rel="stylesheet" href="../styles/globals.css">
     <link rel="stylesheet" href="../styles/logo.css">
-
 </head>
+
 <body>
 <main class="site-main">
     <header class="site-header">
@@ -39,23 +39,20 @@
             </div>
         </nav>
     </header>
-    <div class="main-content">
-        <section id="content">
-            <div class="wardrobe">
-                <div class="wardrobe-item">
-                    <img src="../img/task2_img/toy1.png" alt="Шкаф" class="wardrobe-img"/>
-                    <div class="toys-container">
-                        <img src="../img/task2_img/toy2.png" alt="Лодка" class="toy boat"/>
-                        <img src="../img/task2_img/toy3.png" alt="Машина" class="toy car"/>
-                        <img src="../img/task2_img/toy4.png" alt="Мальчик" class="toy boy"/>
-                    </div>
-                    <div class="hover-text">
-                        <span class="default-text">Магазин игрушек</span>
-                        <span class="active-text">Покупаю!</span>
-                    </div>
-                </div>
+    <div class="page-content">
+        <div class="container">
+            <h1>Тест: Ругательства</h1>
+            <div id="noQuestions">Вопросы закончились</div>
+
+            <div id="stats" class="stats">
+                <h2>Результаты теста</h2>
+                <p>Вы ответили правильно на <span id="correctCount"></span> из <span id="totalCount"></span> вопросов (<span id="percent"></span>%)</p>
+                <div class="progress-bar"><div id="progressBar" class="progress"></div></div>
             </div>
-        </section>
+
+            <div id="questionsContainer" class="questions-container"></div>
+
+        </div>
     </div>
     <footer class="footer">
         <div class="footer-content">
@@ -95,5 +92,7 @@
         </div>
     </footer>
 </main>
+<script src="task3.js"> </script>
+
 </body>
 </html>
