@@ -367,5 +367,68 @@
         showStep(0);
     });
 </script>
+
+<div id="freeTrialModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal" aria-label="Закрыть">×</button>
+        <h2>Начните бесплатно</h2>
+        <p class="modal-subtitle">Персонализированный план питания за 30 секунд</p>
+        <form id="trialForm">
+            <input type="text" id="modalName" placeholder="Ваше имя" required />
+            <input type="email" id="modalEmail" placeholder="Email" required />
+            <button type="submit" class="submit-btn">Получить план бесплатно</button>
+        </form>
+        <p class="success-message hidden" id="successMsg">Спасибо! Ваш план уже формируется. Проверьте почту!</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('freeTrialModal');
+        const openButtons = document.querySelectorAll('.btn-green');
+        const closeBtn = document.querySelector('.close-modal');
+        const form = document.getElementById('trialForm');
+        const successMsg = document.getElementById('successMsg');
+
+        openButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+                form.reset();
+                form.style.display = 'block';
+            }, 400);
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('modalName').value.trim();
+            const email = document.getElementById('modalEmail').value.trim();
+
+            if (name && email) {
+                form.style.display = 'none';
+                successMsg.classList.remove('hidden');
+            }
+        });
+    });
+</script>
 </body>
 </html>
