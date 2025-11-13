@@ -45,7 +45,7 @@ body {
     text-decoration: none;
     color: var(--dark_green);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
@@ -109,7 +109,7 @@ body {
     border-radius: 3.125rem;
     font-family: var(--font-work), sans-serif;
     font-weight: 500;
-    font-size: 1.375rem;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
 }
 
@@ -137,7 +137,7 @@ body {
 }
 
 .btn-dark {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     background-color: var(--dark_green);
     color: white;
     border: 2px solid transparent;
@@ -455,7 +455,7 @@ body {
     }
 
     .site-menu a,.menu-item.dropdown .dropdown-content a{
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .logo-container {
@@ -1719,7 +1719,6 @@ body {
 
 .hidden { display: none; }
 
-/* Адаптив */
 @media (max-width: 480px) {
     .modal-content {
         padding: 2rem 1.5rem;
