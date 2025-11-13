@@ -246,8 +246,8 @@
     </footer>
 </main>
 <script>
+    let isMobile = window.innerWidth <= 1100;
     document.addEventListener('DOMContentLoaded', function () {
-        const isMobile = window.innerWidth <= 1100;
         const content = document.querySelector('.content');
         if (!content) return;
 
@@ -287,6 +287,18 @@
             carousel.querySelectorAll('.card-1, .pic-2')
                 .forEach(el => el.style.transform = 'none');
         }
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const isMobile2 = window.innerWidth <= 1100
+            if (isMobile !== isMobile2) {
+                isMobile = isMobile2;
+                location.reload();
+            }
+        }, 300);
     });
 </script>
 

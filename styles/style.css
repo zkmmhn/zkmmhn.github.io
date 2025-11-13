@@ -137,6 +137,7 @@ body {
 }
 
 .btn-dark {
+    font-size: 1.1rem;
     background-color: var(--dark_green);
     color: white;
     border: 2px solid transparent;
@@ -406,7 +407,7 @@ body {
     }
 
     .content .title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         text-align: center;
         margin: 0 auto 1rem;
         max-width: 50rem;
@@ -449,10 +450,13 @@ body {
         flex: 1;
         min-width: 6rem;
         max-width: 10rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 0.6rem 0.8rem;
     }
 
+    .site-menu a,.menu-item.dropdown .dropdown-content a{
+        font-size: 1rem;
+    }
 
     .logo-container {
         transform: scale(0.4);
@@ -472,7 +476,9 @@ body {
         transform: none;
         z-index: 10;
     }
-
+    .buttons-above .btn {
+        font-size: 1.4rem;
+    }
     .content .card-1,
     .content .pic-1,
     .content .card-2,
