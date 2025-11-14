@@ -19,7 +19,6 @@ const createEl = (tag, cls, text) => {
     return el;
 };
 
-// ---------- создание элемента ----------
 function createItem(text, color, key) {
     const el = createEl('div', 'item');
     el.draggable = true;
@@ -42,7 +41,6 @@ function createItem(text, color, key) {
     return el;
 }
 
-// ---------- перетаскивание ----------
 function onStart(e) {
     dragged = this;
     const r = this.getBoundingClientRect();
@@ -51,7 +49,6 @@ function onStart(e) {
 
     this.classList.add('dragging');
 
-    // Важно: pointer-events выключаем только ПОСЛЕ начала drag
     setTimeout(() => {
         this.style.pointerEvents = 'none';
     }, 0);
@@ -61,12 +58,8 @@ function onStart(e) {
 
 function onEnd() {
     if (!dragged) return;
-
     dragged.classList.remove('dragging');
-
-    // вернуть кликабельность
     dragged.style.pointerEvents = 'auto';
-
     dragged = null;
 }
 
@@ -74,7 +67,6 @@ function clamp(v, min, max) {
     return Math.max(min, Math.min(v, max));
 }
 
-// ---------- логика размещения без наложений ----------
 function fixCollisions(el) {
     const rect = el.getBoundingClientRect();
     const others = [...topBlock.querySelectorAll('.item')]
@@ -96,7 +88,6 @@ function fixCollisions(el) {
     });
 }
 
-// ---------- верхний блок ----------
 topBlock.addEventListener('dragover', e => {
     if (!dragged) return;
     e.preventDefault();
@@ -125,7 +116,6 @@ topBlock.addEventListener('drop', () => {
     dragged.style.backgroundColor = '#cccccc';
 });
 
-// ---------- левый блок ----------
 leftBlock.addEventListener('dragover', e => e.preventDefault());
 
 leftBlock.addEventListener('drop', () => {
@@ -150,7 +140,6 @@ leftBlock.addEventListener('drop', () => {
     dragged.style.backgroundColor = dragged.dataset.originalColor;
 });
 
-// ---------- вывод текста по клику ----------
 function onTopClick() {
     if (this.parentNode !== topBlock) return;
 
@@ -161,7 +150,6 @@ function onTopClick() {
     displayArea.scrollTop = displayArea.scrollHeight;
 }
 
-// ---------- парсинг ----------
 parseBtn.addEventListener('click', () => {
     const raw = textInput.value.trim();
     if (!raw) return;
