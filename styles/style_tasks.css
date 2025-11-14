@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 #content {
     flex: 1;
     display: flex;
@@ -6,7 +11,7 @@
     align-items: center;
     background: var(--gray);
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     min-height: 0;
 }
 
@@ -92,7 +97,6 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-height: 0;
 }
 
 .main-content {
